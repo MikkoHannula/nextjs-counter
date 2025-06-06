@@ -1,6 +1,9 @@
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import postgres from 'postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
+
+// This file is for seeding the database and should not be deployed to production.
+// Remove or exclude this file from production builds to avoid deployment errors on Vercel.
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
